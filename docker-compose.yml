@@ -1,0 +1,21 @@
+services:
+  scraper:
+    build: .
+    ports:
+      - "${PORT:-8000}:${PORT:-8000}"
+    environment:
+      PORT: ${PORT:-8000}
+      AUTH_TOKEN: ${AUTH_TOKEN:-}
+      PROXY_URL: ${PROXY_URL:-}
+      CLOAKBROWSER_LICENSE_KEY: ${CLOAKBROWSER_LICENSE_KEY:-}
+      MAX_CONCURRENT_SCRAPES: ${MAX_CONCURRENT_SCRAPES:-3}
+      CB_HEADLESS: ${CB_HEADLESS:-true}
+      CB_HUMANIZE: ${CB_HUMANIZE:-false}
+      CB_HUMAN_PRESET: ${CB_HUMAN_PRESET:-}
+      CB_GEOIP: ${CB_GEOIP:-false}
+      CB_TIMEZONE: ${CB_TIMEZONE:-}
+      CB_LOCALE: ${CB_LOCALE:-}
+      CB_USER_AGENT: ${CB_USER_AGENT:-}
+      CB_ARGS: ${CB_ARGS:-}
+      CB_LAUNCH_KWARGS: ${CB_LAUNCH_KWARGS:-}
+    restart: unless-stopped

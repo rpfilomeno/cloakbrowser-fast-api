@@ -1,0 +1,15 @@
+.git
+.github
+.playwright-mcp
+.env
+.env.example
+__pycache__
+*.pyc
+.venv
+venv
+.pytest_cache
+tests
+requirements-dev.txt
+docker-compose.yml
+Dockerfile
+.dockerignore
